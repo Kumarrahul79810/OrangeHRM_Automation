@@ -1,0 +1,22 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+
+# TestNG
+test-output/
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary Files
+*.tmp
+
+# Local Images
+PROFILE.jpg

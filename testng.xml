@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="OrangeHRM Suite">
+
+    <test name="Employee Flow Test">
+
+        <classes>
+
+            <class name="tests.EmployeeFlowTest"/>
+            <class name="tests.EmployeeLoginTest"/>
+            <class name="tests.ProfilePictureUploadTest"/>
+
+        </classes>
+
+    </test>
+
+</suite>
