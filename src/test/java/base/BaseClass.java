@@ -45,13 +45,13 @@ public class BaseClass {
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 
-//    @AfterClass(alwaysRun = true)
-//    public void tearDown() {
-//
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//
-//    }
+    @AfterClass(alwaysRun = true)
+    public void tearDown() {
+
+        if (driver != null) {
+            driver.quit();
+        }
+
+    }
 
 }
