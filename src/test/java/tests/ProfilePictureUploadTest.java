@@ -24,7 +24,10 @@ public class ProfilePictureUploadTest extends BaseClass {
 
         picture.openPhotoPage();
 
-        picture.uploadPhoto("C:\\Users\\HP\\IdeaProjects\\IMG4.jpg");
+        String imagePath = System.getProperty("user.dir")
+                + "\\src\\test\\resources\\images\\PROFILE.jpg";
+
+        picture.uploadPhoto(imagePath);
 
         picture.clickSave();
 
