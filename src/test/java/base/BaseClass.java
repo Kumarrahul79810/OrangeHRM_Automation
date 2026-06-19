@@ -19,23 +19,17 @@ public class BaseClass {
 
         ChromeOptions options = new ChromeOptions();
 
-        // Run in headless mode when GitHub Actions is used
-        if (System.getProperty("headless") != null) {
-            options.addArguments("--headless=new");
-        }
-
-        options.addArguments("--window-size=1920,1080");
-        options.addArguments("--disable-gpu");
+        // Required for GitHub Actions (Linux)
         options.addArguments("--headless=new");
-        options.addArguments("--disable-notifications");
-        options.addArguments("--disable-popup-blocking");
-        options.addArguments("--disable-save-password-bubble");
-        options.addArguments("--disable-infobars");
-
-        // Required for Linux / GitHub Actions
+        options.addArguments("--window-size=1920,1080");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
         options.addArguments("--remote-allow-origins=*");
+
+        // Browser Settings
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-popup-blocking");
 
         driver = new ChromeDriver(options);
 
@@ -45,6 +39,10 @@ public class BaseClass {
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
+        // Debug (GitHub Actions ke liye useful)
+        System.out.println("Current URL : " + driver.getCurrentUrl());
+        System.out.println("Page Title  : " + driver.getTitle());
     }
 
     @AfterClass(alwaysRun = true)
@@ -53,7 +51,5 @@ public class BaseClass {
         if (driver != null) {
             driver.quit();
         }
-
     }
-
 }
