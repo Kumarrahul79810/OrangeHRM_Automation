@@ -71,7 +71,6 @@ public class EmployeeSearchPage extends BasePage {
         System.out.println("Suggestion List Displayed");
 
         employeeName.sendKeys(Keys.ARROW_DOWN);
-
         employeeName.sendKeys(Keys.ENTER);
 
         System.out.println("Employee Selected");
@@ -82,8 +81,15 @@ public class EmployeeSearchPage extends BasePage {
 
         waitForLoader();
 
-        System.out.println("Search Completed");
+        waitUntilVisible(By.xpath("//div[contains(@class,'oxd-table-body')]"));
 
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Search Completed");
     }
 
     // ===========================

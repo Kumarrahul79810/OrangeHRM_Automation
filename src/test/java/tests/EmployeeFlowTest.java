@@ -35,7 +35,7 @@ public class EmployeeFlowTest extends BaseClass {
         employee.enterLastName(lastName);
 
         // Store Generated Employee ID
-        employee.getEmployeeId();
+        String employeeId = employee.generateEmployeeId();
 
         // Enable Employee Login Details
         employee.enableLoginDetails();

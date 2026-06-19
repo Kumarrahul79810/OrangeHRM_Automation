@@ -76,13 +76,21 @@ public class AddEmployeePage extends BasePage {
 
         click(pimMenu);
 
+        waitForPageToLoad();
+
+        waitForLoader();
+
+        waitUntilVisible(By.xpath("//a[text()='Add Employee']"));
+
         System.out.println("PIM Module Opened");
 
         click(addEmployeeMenu);
 
-        System.out.println("Add Employee Page Opened");
-
         waitForPageToLoad();
+
+        waitForLoader();
+
+        System.out.println("Add Employee Page Opened");
 
     }
 
@@ -114,6 +122,17 @@ public class AddEmployeePage extends BasePage {
 
         return employeeId;
 
+    }
+
+    public String generateEmployeeId() {
+
+        employeeId = String.valueOf((int)(Math.random() * 90000) + 10000);
+
+        System.out.println("Generated Employee ID : " + employeeId);
+
+        type(txtEmployeeId, employeeId);
+
+        return employeeId;
     }
 
     // ===========================
