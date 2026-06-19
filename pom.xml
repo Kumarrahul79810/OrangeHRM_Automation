@@ -12,7 +12,7 @@
 
     <properties>
 
-        <maven.compiler.release>23</maven.compiler.release>
+        <maven.compiler.release>21</maven.compiler.release>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -24,12 +24,14 @@
 
     <dependencies>
 
+        <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
 
+        <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -43,22 +45,19 @@
 
         <plugins>
 
+            <!-- Java Compiler -->
             <plugin>
-
                 <groupId>org.apache.maven.plugins</groupId>
-
                 <artifactId>maven-compiler-plugin</artifactId>
-
                 <version>3.14.0</version>
 
                 <configuration>
-
-                    <release>23</release>
-
+                    <release>21</release>
                 </configuration>
 
             </plugin>
 
+            <!-- TestNG Runner -->
             <plugin>
 
                 <groupId>org.apache.maven.plugins</groupId>
