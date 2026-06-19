@@ -164,18 +164,12 @@ public class AddEmployeePage extends BasePage {
 
         click(btnSave);
 
-        System.out.println("Waiting for Employee to be Created...");
+        System.out.println("Waiting for Personal Details Page...");
 
-        // Loader khatam hone ka wait
-        waitForLoader();
-
-        // Page load complete hone ka wait
-        waitForPageToLoad();
-
-        // Personal Details page visible hone ka wait
         waitUntilVisible(By.xpath("//h6[text()='Personal Details']"));
 
         System.out.println("Employee Saved Successfully");
+
     }
 
     public boolean isEmployeeCreated() {
