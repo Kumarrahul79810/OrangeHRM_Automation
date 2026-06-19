@@ -51,7 +51,7 @@ public class EmployeeFlowTest extends BaseClass {
 
         Assert.assertTrue(employee.isEmployeeCreated());
 
-        // Search Newly Created Employee
+        // Search Newly Created Employe
         EmployeeSearchPage search = new EmployeeSearchPage(driver);
 
         search.openEmployeeList();
