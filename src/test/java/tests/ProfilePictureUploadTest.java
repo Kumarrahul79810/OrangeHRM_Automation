@@ -7,6 +7,8 @@ import base.BaseClass;
 import pages.LoginPage;
 import pages.ProfilePicturePage;
 
+import java.nio.file.Paths;
+
 public class ProfilePictureUploadTest extends BaseClass {
 
     @Test
@@ -24,8 +26,14 @@ public class ProfilePictureUploadTest extends BaseClass {
 
         picture.openPhotoPage();
 
-        String imagePath = System.getProperty("user.dir")
-                + "\\src\\test\\resources\\images\\PROFILE.jpg";
+        String imagePath = Paths.get(
+                        "src",
+                        "test",
+                        "resources",
+                        "images",
+                        "PROFILE.jpg")
+                .toAbsolutePath()
+                .toString();
 
         picture.uploadPhoto(imagePath);
 

@@ -32,8 +32,7 @@ public class ProfilePicturePage extends BasePage {
     @FindBy(css = "(//img[contains(@class,'employee-image')])[2]")
     private WebElement plusButton;
 
-    @FindBy(css = "input[type='file']")
-    private WebElement uploadInput;
+
 
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement saveButton;
