@@ -37,7 +37,7 @@ public class EmployeeFlowTest extends BaseClass {
         // Store Generated Employee ID
         String employeeId = employee.generateEmployeeId();
 
-        // Enable Employee Login Detail
+        // Enable Employee Login Details
         employee.enableLoginDetails();
 
         // Generate Unique Username
