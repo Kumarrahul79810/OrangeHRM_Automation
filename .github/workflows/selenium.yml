@@ -37,4 +37,4 @@ jobs:
         run: mvn clean compile
 
       - name: Run TestNG Tests
-        run: mvn test
+        run: mvn test -Dheadless=true
